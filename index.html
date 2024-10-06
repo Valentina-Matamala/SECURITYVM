@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condominio Seguro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pantalla de Inicio -->
+    <div id="splash-screen" class="screen">
+        <h1>Condominio Seguro</h1>
+        <p>Fecha y Hora: <span id="currentDateTime"></span></p>
+        <button id="loginBtn">Ingresar o Registrarse</button>
+    </div>
+
+    <!-- Pantalla de Login -->
+    <div id="login-screen" class="screen hidden">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" required>
+
+            <label for="pin">Código PIN:</label>
+            <input type="password" id="pin" required>
+
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <!-- Pantalla Menú Principal -->
+    <div id="main-menu" class="screen hidden">
+        <h2>Menú Principal</h2>
+        <ul>
+            <li><button onclick="showPage('normas')">Normas de Condominio</button></li>
+            <li><button onclick="showPage('recursos')">Recursos Educativos</button></li>
+            <li><button onclick="showPage('calendario')">Calendario de Actividades</button></li>
+            <li><button onclick="showPage('incidentes')">Reportes de Incidentes</button></li>
+            <li><button onclick="showPage('quiz')">Quiz Interactivo</button></li>
+            <li><button onclick="showPage('contacto')">Contacto Emergencias</button></li>
+        </ul>
+    </div>
+
+    <!-- Pantalla Normas de Condominio -->
+    <div id="normas" class="screen hidden">
+        <h2>Normas de Condominio</h2>
+        <ul>
+            <li><strong>Uso de Espacios Comunes:</strong> Los espacios comunes deben ser utilizados de manera responsable.</li>
+            <li><strong>Ruido y Convivencia:</strong> Respetar el horario de silencio entre las 22:00 y las 8:00 horas.</li>
+            <li><strong>Mascotas:</strong> Controlar a las mascotas en áreas comunes y recoger sus desechos.</li>
+            <li><strong>Estacionamientos:</strong> Respetar los espacios de estacionamiento asignados.</li>
+            <li><strong>Seguridad:</strong> Mantener las puertas cerradas y no compartir códigos de acceso.</li>
+            <li><strong>Emergencias:</strong> Seguir los protocolos de emergencia establecidos.</li>
+            <li><strong>Sanciones:</strong> Incumplir las normas puede derivar en sanciones y multas.</li>
+        </ul>
+        <button onclick="showPage('main-menu')">Volver al Menú Principal</button>
+    </div>
+
+    <!-- Pantalla Recursos Educativos -->
+    <div id="recursos" class="screen hidden">
+        <h2>Recursos Educativos</h2>
+        <ul>
+            <li><strong>Guía de prevención de robos:</strong> Consejos para evitar robos en el condominio.</li>
+            <li><strong>Talleres de primeros auxilios:</strong> Próximos talleres de primeros auxilios.</li>
+            <li><strong>Protocolos de evacuación:</strong> Procedimientos a seguir en caso de emergencia.</li>
+            <li><strong>Guía de actividad sospechosa:</strong> Cómo identificar actividades sospechosas.</li>
+            <li><strong>Seguridad contra incendios:</strong> Uso de extintores y sistemas contra incendios.</li>
+            <li><strong>Seguridad infantil:</strong> Consejos sobre cómo proteger a los niños en el condominio.</li>
+            <li><strong>Prevención de violencia intrafamiliar:</strong> Recursos y contactos para ayuda.</li>
+            <li><strong>Seguridad vial dentro del condominio:</strong> Reglas y recomendaciones sobre el uso de vehículos.</li>
+        </ul>
+        <button onclick="showPage('main-menu')">Volver al Menú Principal</button>
+    </div>
+
+    <!-- Pantalla Calendario de Actividades -->
+    <div id="calendario" class="screen hidden">
+        <h2>Calendario de Actividades</h2>
+        <p>Visualiza las próximas actividades y eventos del condominio.</p>
+        <button onclick="showPage('main-menu')">Volver al Menú Principal</button>
+    </div>
+
+    <!-- Pantalla Reportes de Incidentes -->
+    <div id="incidentes" class="screen hidden">
+        <h2>Reportes de Incidentes</h2>
+        <ul>
+            <li><strong>Actividad sospechosa:</strong> Reportar actividades sospechosas en el condominio.</li>
+            <li><strong>Robo o intento de robo:</strong> Informa sobre robos o intentos de robo.</li>
+            <li><strong>Incendio:</strong> Registrar incidentes de incendio.</li>
+            <li><strong>Daños en instalaciones:</strong> Reportar daños en áreas comunes.</li>
+            <li><strong>Accidentes en áreas comunes:</strong> Informar sobre accidentes ocurridos.</li>
+            <li><strong>Incumplimiento de normas:</strong> Reportar cualquier incumplimiento de las reglas del condominio.</li>
+        </ul>
+        <button onclick="showPage('main-menu')">Volver al Menú Principal</button>
+    </div>
+
+    <!-- Pantalla Quiz Interactivo -->
+    <div id="quiz" class="screen hidden">
+        <h2>Quiz Interactivo: ¿Qué tan seguro estás en tu condominio?</h2>
+        <p><strong>Pregunta:</strong> ¿Qué deberías hacer si ves a una persona desconocida merodeando en las áreas comunes?</p>
+        <ul>
+            <li>a) Ignorarla, probablemente es un nuevo vecino.</li>
+            <li>b) Confrontarla inmediatamente.</li>
+            <li>c) Reportarla al equipo de seguridad o administración.</li>
+            <li>d) Tomar una foto y enviarla al grupo de WhatsApp de los vecinos.</li>
+        </ul>
+        <p><strong>Respuesta Correcta:</strong> c) Reportarla al equipo de seguridad o administración.</p>
+        <button onclick="showPage('main-menu')">Volver al Menú Principal</button>
+    </div>
+
+    <!-- Pantalla Contacto Emergencias -->
+    <div id="contacto" class="screen hidden">
+        <h2>Contacto de Emergencias</h2>
+        <ul>
+            <li><strong>Administración:</strong> +5698888888</li>
+            <li><strong>Seguridad:</strong> +5699666666</li>
+            <li><strong>Carabineros:</strong> 133</li>
+            <li><strong>Bomberos:</strong> 132</li>
+            <li><strong>SAMU:</strong> 131</li>
+            <li><strong>PDI:</strong> 134</li>
+        </ul>
+        <button onclick="showPage('main-menu')">Volver al Menú Principal</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

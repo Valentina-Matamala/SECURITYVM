@@ -1,0 +1,50 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+}
+
+/* Estilo para los encabezados */
+h1, h2 {
+    color: #0b3d91;
+}
+
+/* Estilo para los botones */
+button {
+    padding: 10px;
+    background-color: #0b3d91;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+/* Efecto hover para los botones */
+button:hover {
+    background-color: #084c8c;
+}
+
+/* Clase para ocultar pantallas */
+.hidden {
+    display: none;
+}
+
+/* Estilo para las pantallas principales */
+.screen {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Estilo para listas no ordenadas */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Estilo para los elementos de la lista */
+li {
+    margin: 10px 0;
+}
